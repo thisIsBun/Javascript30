@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ocean-900: #003e52;
+  --color-ocean-950: #002f3f;
+  --color-gray-50: #fff;
+  --color-gray-300: #a7a8a9;
+  --color-gray-500: #809ea8;
+  --color-gold-500: #bc955c;
+}
