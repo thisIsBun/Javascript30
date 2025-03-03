@@ -1,7 +1,12 @@
 import "./styles/tailwind.css";
+import Home from "./pages/Home";
 
 function App() {
-  return <h1 className="p-4 pt-2">Hello world!</h1>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
