@@ -1,3 +1,5 @@
+import challenges from "../data/challenges";
+
 const Home = () => {
   return (
     <>
@@ -30,7 +32,28 @@ const Home = () => {
           to reinforce my frontend skills.
         </p>
       </main>
+      <section className="flex justify-center">
+        <ChallengeCard />
+      </section>
     </>
+  );
+};
+
+const ChallengeCard = () => {
+  return (
+    <ul className="flex max-w-6xl flex-wrap justify-between px-12">
+      {challenges.map((challenge) => {
+        return (
+          <li key={challenge.day} className="mb-8 w-1/5 p-8">
+            <div className="h-36">
+              <img src={challenge.img} alt={challenge.title} />
+            </div>
+            <h3>{challenge.title}</h3>
+            <span>Day {challenge.day}</span>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 
