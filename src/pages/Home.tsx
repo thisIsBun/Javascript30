@@ -10,7 +10,7 @@ const Home = () => {
           className="inline-block w-96"
         />
       </header>
-      <main className="flex flex-col items-center gap-3 py-8 text-gray-50">
+      <main className="flex flex-col items-center gap-3 px-4 py-12 text-gray-50">
         <p>
           Inspired by{" "}
           <a
@@ -32,7 +32,7 @@ const Home = () => {
           to reinforce my frontend skills.
         </p>
       </main>
-      <section className="flex justify-center">
+      <section>
         <ChallengeCard />
       </section>
     </>
@@ -41,18 +41,28 @@ const Home = () => {
 
 const ChallengeCard = () => {
   return (
-    <ul className="flex max-w-6xl flex-wrap justify-between px-12">
-      {challenges.map((challenge) => {
-        return (
-          <li key={challenge.day} className="mb-8 w-1/5 p-8">
-            <div className="h-36">
-              <img src={challenge.img} alt={challenge.title} />
+    <ul className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {challenges.map((challenge) => (
+        <li key={challenge.day} className="flex flex-col items-center">
+          <div className="group relative w-full max-w-[280px] overflow-hidden">
+            <span className="absolute z-10 bg-black px-2 py-1 text-xs font-bold text-white shadow-md transition-opacity duration-300 group-hover:opacity-100">
+              Day {challenge.day}
+            </span>
+            <img
+              src={challenge.img}
+              alt={challenge.title}
+              className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-108"
+            />
+          </div>
+          <div className="mt-2 text-center">
+            <div className="flex items-center justify-center">
+              <span className="text-gold-500 mx-2 text-sm font-semibold">
+                {challenge.title}
+              </span>
             </div>
-            <h3>{challenge.title}</h3>
-            <span>Day {challenge.day}</span>
-          </li>
-        );
-      })}
+          </div>
+        </li>
+      ))}
     </ul>
   );
 };
