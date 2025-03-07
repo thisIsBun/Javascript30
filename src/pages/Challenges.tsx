@@ -56,7 +56,7 @@ const Challenges = () => {
         </div>
       </article>
 
-      <NavLink to="/" className="home-button fixed right-6 bottom-6">
+      <NavLink to="/" className="button-bg fixed right-6 bottom-6">
         Go to Home
       </NavLink>
     </>

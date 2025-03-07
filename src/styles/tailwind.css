@@ -13,7 +13,7 @@
   .nav-button {
     @apply border-yellow-500 text-yellow-500 hover:bg-yellow-500 border px-6 py-2 transition hover:text-ocean-900
   }
-  .home-button {
+  .button-bg {
     @apply text-ocean-900 bg-yellow-500 px-6 py-2 transition hover:scale-110
   }
 }
