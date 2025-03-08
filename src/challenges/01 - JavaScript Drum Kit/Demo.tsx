@@ -11,14 +11,15 @@ import snare from "./sounds/snare.wav";
 import tom from "./sounds/tom.wav";
 import tink from "./sounds/tink.wav";
 import DemoNoteButtons from "../../components/DemoNoteButtons";
+import { useRef, useEffect } from "react";
 
-type keysType = {
+type KeysType = {
   keyCap: string;
   name: string;
   file: string;
 };
 
-const keys: keysType[] = [
+const keys: readonly KeysType[] = [
   { keyCap: "a", name: "clap", file: clap },
   { keyCap: "s", name: "hihat", file: hihat },
   { keyCap: "d", name: "kick", file: kick },
@@ -28,58 +29,53 @@ const keys: keysType[] = [
   { keyCap: "j", name: "snare", file: snare },
   { keyCap: "k", name: "tom", file: tom },
   { keyCap: "l", name: "tink", file: tink },
-];
+] as const;
 
 const Demo = () => {
   const { challengeId } = useParams<{ challengeId: string }>();
+  const keyRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const audioRefs = useRef<{ [key: string]: HTMLAudioElement | null }>({});
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    event.preventDefault();
-    const matchKey = keys.find((key) => key.keyCap === event.key);
-    if (!matchKey) return;
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const pressKey = keyRefs.current[event.key.toLowerCase()];
+      if (!pressKey) return;
+      pressKey.classList.add("playing");
+      const audioElement = audioRefs.current[event.key.toLowerCase()];
+      if (!audioElement) return;
+      audioElement.currentTime = 0;
+      audioElement.play();
+    };
 
-    document
-      .querySelector(`div[data-key="${matchKey.keyCap}"]`)
-      ?.classList.add("playing");
+    const handleKeyUp = (event: KeyboardEvent) => {
+      const releaseKey = keyRefs.current[event.key.toLowerCase()];
+      if (!releaseKey) return;
+      releaseKey.classList.remove("playing");
+    };
 
-    const audio = document.querySelector(
-      `audio[data-key="${matchKey.keyCap}"]`,
-    ) as HTMLAudioElement;
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
 
-    audio.currentTime = 0;
-    audio.play();
-  };
-
-  const handleKeyUp = (event: React.KeyboardEvent) => {
-    event.preventDefault();
-
-    const matchKey = keys.find((key) => key.keyCap === event.key);
-    if (!matchKey) return;
-
-    document
-      .querySelector(`div[data-key="${matchKey.keyCap}"]`)
-      ?.classList.remove("playing");
-  };
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
 
   return (
     <div
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className="bg-cover bg-bottom"
-      onKeyDown={(event) => {
-        handleKeyDown(event);
-      }}
-      onKeyUp={(event) => {
-        handleKeyUp(event);
-      }}
-      tabIndex={0}
     >
       <div className="flex min-h-screen flex-1 items-center justify-center">
         {keys.map(({ keyCap, name }) => {
           return (
             <div
-              data-key={keyCap}
               key={keyCap}
               className="m-2.5 w-40 rounded-lg border-4 border-black bg-[rgba(0,0,0,0.4)] px-[5px] py-2.5 text-center text-2xl text-gray-50 transition duration-75"
+              ref={(element) => {
+                keyRefs.current[keyCap] = element;
+              }}
             >
               <kbd className="block text-6xl uppercase">{keyCap}</kbd>
               <span className="text-xl tracking-widest text-yellow-500 uppercase">
@@ -90,7 +86,13 @@ const Demo = () => {
         })}
       </div>
       {keys.map(({ keyCap, file }) => (
-        <audio data-key={keyCap} src={file} key={keyCap}></audio>
+        <audio
+          src={file}
+          key={keyCap}
+          ref={(element) => {
+            audioRefs.current[keyCap] = element;
+          }}
+        ></audio>
       ))}
       <DemoNoteButtons challengeId={challengeId || "1"} buttonName="Note" />
     </div>
