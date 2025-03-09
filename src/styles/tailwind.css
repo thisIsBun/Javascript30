@@ -11,9 +11,27 @@
 
 @layer components {
   .nav-button {
-    @apply border-yellow-500 text-yellow-500 hover:bg-yellow-500 border px-6 py-2 transition hover:text-ocean-900
+    @apply hover:text-ocean-900 border border-yellow-500 px-6 py-2 text-yellow-500 transition hover:bg-yellow-500;
   }
   .button-bg {
-    @apply text-ocean-900 bg-yellow-500 px-6 py-2 transition hover:scale-110
+    @apply text-ocean-900 bg-yellow-500 px-6 py-2 transition hover:scale-110;
+  }
+  .note-h1 {
+    @apply mt-20 text-center text-3xl font-bold;
+  }
+  .note-h2 {
+    @apply mb-4 text-2xl font-semibold;
+  }
+  .note-container {
+    @apply mx-auto my-20 max-w-5xl p-4;
+  }
+  .note-code {
+    @apply text-ocean-950 rounded bg-gray-200 px-1;
+  }
+  .note-ol {
+    @apply mb-6 list-inside list-decimal space-y-2;
+  }
+  .note-ul {
+    @apply ml-6 list-inside list-disc space-y-2;
   }
 }
