@@ -2,11 +2,13 @@ import { useParams, useNavigate } from "react-router";
 import JavaScriptDrumKit from "../challenges/01 - JavaScript Drum Kit/Demo";
 import JSAndCSSClock from "../challenges/02 - JS and CSS Clock/Demo";
 import CSSVariables from "../challenges/03 - CSS Variables/Demo";
+import ArrayCardioDay1 from "../challenges/04 - Array Cardio Day 1/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
   "2": JSAndCSSClock,
   "3": CSSVariables,
+  "4": ArrayCardioDay1,
 };
 
 const Demo = () => {
