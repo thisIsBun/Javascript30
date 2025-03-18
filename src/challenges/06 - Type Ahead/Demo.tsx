@@ -1,5 +1,7 @@
 import "./style.css";
 import { useEffect, useMemo, useState, Fragment } from "react";
+import DemoNoteButtons from "../../components/DemoNoteButtons";
+import { useParams } from "react-router";
 
 const endpoint =
   "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
@@ -12,10 +14,11 @@ interface City {
 }
 
 const Demo = () => {
+  const { challengeId } = useParams();
   const [data, setData] = useState<City[]>([]);
   const [search, setSearch] = useState("");
 
-  const filterDate = useMemo(() => {
+  const filteredData = useMemo(() => {
     if (!search) return data;
     return data.filter((item) => {
       return (
@@ -39,7 +42,7 @@ const Demo = () => {
   }, []);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(event.target.value.toLocaleLowerCase());
+    setSearch(event.target.value.trim().toLocaleLowerCase());
   };
 
   const highlightText = (text: string) => {
@@ -67,20 +70,22 @@ const Demo = () => {
           onChange={handleSearch}
         />
         <ul className="suggestions">
-          {filterDate.map(({ city, population, rank, state }) => {
+          {filteredData.map(({ city, population, rank, state }) => {
+            const numFormatter = new Intl.NumberFormat();
             return (
               <li key={rank}>
                 <span className="name">
                   {highlightText(city)}, {highlightText(state)}
                 </span>
                 <span className="population">
-                  {Number(population).toLocaleString()}
+                  {numFormatter.format(Number(population))}
                 </span>
               </li>
             );
           })}
         </ul>
       </form>
+      <DemoNoteButtons challengeId={challengeId || "6"} buttonName="Note" />
     </>
   );
 };
