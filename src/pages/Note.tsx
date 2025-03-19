@@ -5,6 +5,7 @@ import CSSVariables from "../challenges/03 - CSS Variables/Note";
 import ArrayCardioDay1 from "../challenges/04 - Array Cardio Day 1/Note";
 import FlexPanelGallery from "../challenges/05 - Flex Panel Gallery/Note";
 import TypeAhead from "../challenges/06 - Type Ahead/Note";
+import ArrayCardioDay2 from "../challenges/07 - Array Cardio Day 2/Note";
 
 const notes: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -13,6 +14,7 @@ const notes: Record<string, React.FC> = {
   "4": ArrayCardioDay1,
   "5": FlexPanelGallery,
   "6": TypeAhead,
+  "7": ArrayCardioDay2,
 };
 
 const Note = () => {
