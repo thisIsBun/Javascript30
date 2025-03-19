@@ -158,9 +158,8 @@ const Demo = () => {
     <>
       <div className="flex h-screen items-center justify-center">
         <em className="text-2xl">
-          Psst: have a look at the JavaScript Console
-        </em>{" "}
-        💁
+          Psst: have a look at the JavaScript Console 💁
+        </em>
       </div>
       <DemoNoteButtons challengeId={challengeId || "4"} buttonName="Note" />
     </>
