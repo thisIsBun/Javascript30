@@ -6,6 +6,7 @@ import ArrayCardioDay1 from "../challenges/04 - Array Cardio Day 1/Demo";
 import FlexPanelGallery from "../challenges/05 - Flex Panel Gallery/Demo";
 import TypeAhead from "../challenges/06 - Type Ahead/Demo";
 import ArrayCardioDay2 from "../challenges/07 - Array Cardio Day 2/Demo";
+import FunWithHTML5Canvas from "../challenges/08 - Fun with HTML5 Canvas/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -15,6 +16,7 @@ const demos: Record<string, React.FC> = {
   "5": FlexPanelGallery,
   "6": TypeAhead,
   "7": ArrayCardioDay2,
+  "8": FunWithHTML5Canvas,
 };
 
 const Demo = () => {
