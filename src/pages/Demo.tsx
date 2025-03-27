@@ -9,6 +9,7 @@ import ArrayCardioDay2 from "../challenges/07 - Array Cardio Day 2/Demo";
 import FunWithHTML5Canvas from "../challenges/08 - Fun with HTML5 Canvas/Demo";
 import DevToolsDomination from "../challenges/09 - Dev Tools Domination/Demo";
 import HoldShiftAndCheckCheckboxes from "../challenges/10 - Hold Shift and Check Checkboxes/Demo";
+import CustomVideoPlayer from "../challenges/11 - Custom Video Player/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -21,6 +22,7 @@ const demos: Record<string, React.FC> = {
   "8": FunWithHTML5Canvas,
   "9": DevToolsDomination,
   "10": HoldShiftAndCheckCheckboxes,
+  "11": CustomVideoPlayer,
 };
 
 const Demo = () => {
