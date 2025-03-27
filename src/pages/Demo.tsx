@@ -8,6 +8,7 @@ import TypeAhead from "../challenges/06 - Type Ahead/Demo";
 import ArrayCardioDay2 from "../challenges/07 - Array Cardio Day 2/Demo";
 import FunWithHTML5Canvas from "../challenges/08 - Fun with HTML5 Canvas/Demo";
 import DevToolsDomination from "../challenges/09 - Dev Tools Domination/Demo";
+import HoldShiftAndCheckCheckboxes from "../challenges/10 - Hold Shift and Check Checkboxes/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -19,6 +20,7 @@ const demos: Record<string, React.FC> = {
   "7": ArrayCardioDay2,
   "8": FunWithHTML5Canvas,
   "9": DevToolsDomination,
+  "10": HoldShiftAndCheckCheckboxes,
 };
 
 const Demo = () => {
