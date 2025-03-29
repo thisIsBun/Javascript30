@@ -10,77 +10,88 @@ const challenges: challengeType[] = [
   {
     day: 1,
     title: "JavaScript Drum Kit",
-    description: "Trigger sounds using the keyboard",
+    description:
+      "Feel the rhythm as you tap your keyboard to play drum sounds.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small0.jpg",
     challengeLevel: "medium",
   },
   {
     day: 2,
     title: "CSS + JS Clock",
-    description: "Create a clock using CSS & JavaScript",
+    description:
+      "A real-time analog clock built with JavaScript and CSS, where the hands rotate smoothly to show the current time.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small1.jpg",
     challengeLevel: "medium",
   },
   {
     day: 3,
     title: "CSS Variables and JS",
-    description: "Control CSS variables dynamically",
+    description:
+      "A dynamic interface that lets you adjust image styling by manipulating CSS variables with JavaScript.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small2.jpg",
     challengeLevel: "simple",
   },
   {
     day: 4,
     title: "Array Cardio Day 1",
-    description: "Practice `map`, `filter`, `reduce`",
+    description:
+      "A hands-on JavaScript exercise to practice array methods like filter, map, sort, and reduce.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small3.jpg",
     challengeLevel: "simple",
   },
   {
     day: 5,
     title: "Flex Panels Image Gallery",
-    description: "Create an interactive Flexbox design",
+    description:
+      "An interactive gallery where panels expand with smooth animations using Flexbox and JavaScript.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small4.jpg",
     challengeLevel: "medium",
   },
   {
     day: 6,
     title: "Ajax Type Ahead",
-    description: "Build a live search filter with an API",
+    description:
+      "A live search interface that filters and highlights matching cities and states as you type.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small5.jpg",
     challengeLevel: "medium",
   },
   {
     day: 7,
     title: "Array Cardio Day 2",
-    description: "Deep dive into array methods",
+    description:
+      "A JavaScript exercise to deepen your understanding of array methods like some, every, find, and findIndex.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small6.jpg",
     challengeLevel: "simple",
   },
   {
     day: 8,
     title: "HTML5 Canvas",
-    description: "Draw on a canvas using JavaScript",
+    description:
+      "A playful drawing page that uses the HTML5 Canvas API to create colorful, dynamic brush strokes with JavaScript.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small7.jpg",
     challengeLevel: "challenging",
   },
   {
     day: 9,
     title: "Must Know Dev Tools Tricks",
-    description: "Learn useful Chrome DevTools features",
+    description:
+      "A quick exercise to explore console techniques in DevTools, including styling, warnings, grouping, counting, and timing.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small8.jpg",
     challengeLevel: "simple",
   },
   {
     day: 10,
     title: "Hold Shift and Check Checkboxes",
-    description: "Use `shift` key to select multiple checkboxes",
+    description:
+      "A checkbox interaction that lets you select multiple items at once by holding Shift, just like in email apps.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small9.jpg",
     challengeLevel: "challenging",
   },
   {
     day: 11,
     title: "Custom Video Player",
-    description: "Create a custom HTML5 video player",
+    description:
+      "A custom-built video player with controls for play/pause, skip, volume, playback speed, and progress tracking.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small10.jpg",
     challengeLevel: "challenging",
   },

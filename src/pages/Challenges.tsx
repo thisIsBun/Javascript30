@@ -29,7 +29,7 @@ const Challenges = () => {
           />
         </figure>
 
-        <div className="flex w-2/5 flex-col items-center gap-2">
+        <div className="flex w-2/5 flex-col items-center gap-2 p-10">
           <h4 className="text-xl font-medium text-yellow-500">
             Day {challengeData.day}
           </h4>
