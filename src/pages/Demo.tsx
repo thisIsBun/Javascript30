@@ -10,6 +10,7 @@ import FunWithHTML5Canvas from "../challenges/08 - Fun with HTML5 Canvas/Demo";
 import DevToolsDomination from "../challenges/09 - Dev Tools Domination/Demo";
 import HoldShiftAndCheckCheckboxes from "../challenges/10 - Hold Shift and Check Checkboxes/Demo";
 import CustomVideoPlayer from "../challenges/11 - Custom Video Player/Demo";
+import KeySequenceDetection from "../challenges/12 - Key Sequence Detection/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -23,6 +24,7 @@ const demos: Record<string, React.FC> = {
   "9": DevToolsDomination,
   "10": HoldShiftAndCheckCheckboxes,
   "11": CustomVideoPlayer,
+  "12": KeySequenceDetection,
 };
 
 const Demo = () => {
