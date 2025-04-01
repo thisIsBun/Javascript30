@@ -98,9 +98,10 @@ const challenges: challengeType[] = [
   {
     day: 12,
     title: "Key Sequence Detection",
-    description: "Detect secret key sequences (Konami Code)",
+    description:
+      "Capturing keypress events to trigger the Konami code effect when a specific sequence of keys is entered.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small11.jpg",
-    challengeLevel: "TBC",
+    challengeLevel: "medium",
   },
   {
     day: 13,
