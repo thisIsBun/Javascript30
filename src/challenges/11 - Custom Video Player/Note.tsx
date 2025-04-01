@@ -122,7 +122,7 @@ const Note = () => {
           </ul>
         </ul>
       </main>
-      <DemoNoteButtons challengeId={challengeId || "10"} buttonName="Demo" />
+      <DemoNoteButtons challengeId={challengeId || "11"} buttonName="Demo" />
     </>
   );
 };
