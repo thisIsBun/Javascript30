@@ -106,9 +106,10 @@ const challenges: challengeType[] = [
   {
     day: 13,
     title: "Slide in on Scroll",
-    description: "Trigger animations when scrolling",
+    description:
+      "To detect if an image is visible based on its middle pixel while scrolling, calculate its center and check if it's within the visible portion of the window.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small12.jpg",
-    challengeLevel: "TBC",
+    challengeLevel: "medium",
   },
   {
     day: 14,

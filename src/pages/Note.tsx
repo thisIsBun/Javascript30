@@ -11,6 +11,7 @@ import DevToolsDomination from "../challenges/09 - Dev Tools Domination/Note";
 import HoldShiftAndCheckCheckboxes from "../challenges/10 - Hold Shift and Check Checkboxes/Note";
 import CustomVideoPlayer from "../challenges/11 - Custom Video Player/Note";
 import KeySequenceDetection from "../challenges/12 - Key Sequence Detection/Note";
+import SlideInOnScroll from "../challenges/13 - Slide in on Scroll/Note";
 
 const notes: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -25,6 +26,7 @@ const notes: Record<string, React.FC> = {
   "10": HoldShiftAndCheckCheckboxes,
   "11": CustomVideoPlayer,
   "12": KeySequenceDetection,
+  "13": SlideInOnScroll,
 };
 
 const Note = () => {

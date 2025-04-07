@@ -25,13 +25,13 @@ const Demo = () => {
       const windowHeight = window.innerHeight;
 
       imgRef.current.forEach((img) => {
-        const rect = img?.getClientRects()[0];
+        const rect = img?.getBoundingClientRect();
         if (rect) {
-          const elementMid = rect.top + scrollY + rect.height / 2;
+          const elementMid = scrollY + rect.top + rect.height / 2;
           if (elementMid >= scrollY && elementMid <= scrollY + windowHeight) {
-            img.classList.add("active");
+            img?.classList.add("active");
           } else {
-            img.classList.remove("active");
+            img?.classList.remove("active");
           }
         }
       });
