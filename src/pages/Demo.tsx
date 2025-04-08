@@ -12,6 +12,7 @@ import HoldShiftAndCheckCheckboxes from "../challenges/10 - Hold Shift and Check
 import CustomVideoPlayer from "../challenges/11 - Custom Video Player/Demo";
 import KeySequenceDetection from "../challenges/12 - Key Sequence Detection/Demo";
 import SlideInOnScroll from "../challenges/13 - Slide in on Scroll/Demo";
+import JavaScriptReferencesVSCopying from "../challenges/14 - JavaScript References VS Copying/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -27,6 +28,7 @@ const demos: Record<string, React.FC> = {
   "11": CustomVideoPlayer,
   "12": KeySequenceDetection,
   "13": SlideInOnScroll,
+  "14": JavaScriptReferencesVSCopying,
 };
 
 const Demo = () => {

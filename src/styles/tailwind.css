@@ -29,7 +29,7 @@
     @apply text-ocean-950 rounded bg-gray-200 px-1;
   }
   .note-ol {
-    @apply mb-6 list-inside list-decimal space-y-2;
+    @apply ml-6 list-inside list-decimal space-y-2;
   }
   .note-ul {
     @apply ml-6 list-inside list-disc space-y-2;
