@@ -113,17 +113,19 @@ const challenges: challengeType[] = [
   },
   {
     day: 14,
-    title: "JavaScript References VS Copying",
+    title:
+      "Explores how primitive values and reference types behave differently when copied or mutated in JavaScript.",
     description: "Understand reference vs value in JavaScript",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small13.jpg",
-    challengeLevel: "TBC",
+    challengeLevel: "simple",
   },
   {
     day: 15,
     title: "LocalStorage",
-    description: "Use LocalStorage and event delegation",
+    description:
+      "Built a to-do list app using React and TypeScript, managing state with custom hooks and persisting data in localStorage.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small14.jpg",
-    challengeLevel: "TBC",
+    challengeLevel: "medium",
   },
   {
     day: 16,

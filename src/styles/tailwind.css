@@ -20,7 +20,7 @@
     @apply mt-20 text-center text-3xl font-bold;
   }
   .note-h2 {
-    @apply mb-4 text-2xl font-semibold;
+    @apply mt-6 mb-2 text-2xl font-semibold;
   }
   .note-container {
     @apply mx-auto my-20 max-w-5xl p-4;
