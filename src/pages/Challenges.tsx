@@ -17,6 +17,12 @@ const Challenges = () => {
     }
   }, [challengeData, navigate]);
 
+  useEffect(() => {
+    if (challengeId) {
+      document.title = `Javascript30 - Day${challengeId}`;
+    }
+  }, [challengeId]);
+
   return challengeData ? (
     <>
       <Logo />

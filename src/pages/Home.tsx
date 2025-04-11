@@ -1,6 +1,7 @@
 import challenges from "../data/challenges";
 import { NavLink } from "react-router";
 import Logo from "../components/Logo";
+import { useEffect } from "react";
 
 const challengingBackground = {
   challenging: "#ed4f55",
@@ -10,6 +11,10 @@ const challengingBackground = {
 };
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Javascript30";
+  }, []);
+
   return (
     <>
       <Logo />
