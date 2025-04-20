@@ -26,12 +26,12 @@ const Challenges = () => {
   return challengeData ? (
     <>
       <Logo />
-      <article className="flex items-center justify-between p-12">
-        <figure className="flex h-[70vh] w-3/5 items-center justify-center">
+      <article className="flex items-center justify-center gap-5 p-12">
+        <figure className="flex h-[70vh] w-2/5 items-center justify-center overflow-hidden">
           <img
             src={challengeData.img}
             alt={challengeData.title}
-            className="h-[600px] w-full object-cover"
+            className="h-[400px] w-full object-cover"
           />
         </figure>
 
