@@ -14,6 +14,7 @@ import KeySequenceDetection from "../challenges/12 - Key Sequence Detection/Demo
 import SlideInOnScroll from "../challenges/13 - Slide in on Scroll/Demo";
 import JavaScriptReferencesVSCopying from "../challenges/14 - JavaScript References VS Copying/Demo";
 import LocalStorage from "../challenges/15 - LocalStorage/Demo";
+import MouseMoveShadow from "../challenges/16 - Mouse Move Shadow/Demo";
 
 const demos: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -31,6 +32,7 @@ const demos: Record<string, React.FC> = {
   "13": SlideInOnScroll,
   "14": JavaScriptReferencesVSCopying,
   "15": LocalStorage,
+  "16": MouseMoveShadow,
 };
 
 const Demo = () => {
