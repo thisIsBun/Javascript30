@@ -1,8 +1,19 @@
 import DemoNoteButtons from "../../components/DemoNoteButtons";
 import { useParams } from "react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
-const walk = 30;
+const walk = 300;
+
+const throttle = (callback: (event: MouseEvent) => void, delay: number) => {
+  let lastCall = 0;
+  return (event: MouseEvent) => {
+    const now = new Date().getTime();
+    if (now - lastCall >= delay) {
+      callback(event);
+      lastCall = now;
+    }
+  };
+};
 
 const Demo = () => {
   const { challengeId } = useParams();
@@ -25,20 +36,29 @@ const Demo = () => {
     const yWalk = Math.round((y * walk) / height - walk / 2);
 
     if (h1Ref.current) {
-      h1Ref.current.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(0, 217, 255, 0.301)`;
+      h1Ref.current.style.textShadow = `
+        ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
+        ${xWalk * -1}px ${yWalk}px 0 rgba(0,255,255,0.7),
+        ${yWalk}px ${xWalk * -1}px 0 rgba(0,255,0,0.7),
+        ${yWalk * -1}px ${xWalk}px 0 rgba(0,0,255,0.7)
+      `;
     }
   };
+
+  const mouseMoveThrottle = useMemo(() => {
+    return throttle(handleMouseMove, 20);
+  }, []);
 
   useEffect(() => {
     const div = divRef.current;
     if (div) {
-      div.addEventListener("mousemove", handleMouseMove);
+      div.addEventListener("mousemove", mouseMoveThrottle);
     }
 
     return () => {
-      div?.removeEventListener("mousemove", handleMouseMove);
+      div?.removeEventListener("mousemove", mouseMoveThrottle);
     };
-  }, []);
+  }, [mouseMoveThrottle]);
 
   return (
     <>
