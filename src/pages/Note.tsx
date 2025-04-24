@@ -14,6 +14,7 @@ import KeySequenceDetection from "../challenges/12 - Key Sequence Detection/Note
 import SlideInOnScroll from "../challenges/13 - Slide in on Scroll/Note";
 import JavaScriptReferencesVSCopying from "../challenges/14 - JavaScript References VS Copying/Note";
 import LocalStorage from "../challenges/15 - LocalStorage/Note";
+import MouseMoveShadow from "../challenges/16 - Mouse Move Shadow/Note";
 
 const notes: Record<string, React.FC> = {
   "1": JavaScriptDrumKit,
@@ -31,6 +32,7 @@ const notes: Record<string, React.FC> = {
   "13": SlideInOnScroll,
   "14": JavaScriptReferencesVSCopying,
   "15": LocalStorage,
+  "16": MouseMoveShadow,
 };
 
 const Note = () => {

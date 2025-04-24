@@ -130,9 +130,9 @@ const challenges: challengeType[] = [
   {
     day: 16,
     title: "Mouse Move Shadow",
-    description: "Move text shadow based on mouse position",
+    description: "Move your mouse to see dynamic text changes.",
     img: "https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small15.jpg",
-    challengeLevel: "TBC",
+    challengeLevel: "medium",
   },
   {
     day: 17,
